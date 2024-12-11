@@ -27,7 +27,7 @@ Esse Sistema foi desenvolvido com o intuito de auxiliar instituições de ensino
 
 ## Configurações do Banco de Dados
 
-- **MySQL**: Versão 8.0.4.0
+- **pgAdmin 4**: Versão 8.0.4.0
 - **Estrutura do Banco de Dados**:(https://onecompiler.com/mysql/42wkvj6xe)
   
 ## Credenciais de Acesso
