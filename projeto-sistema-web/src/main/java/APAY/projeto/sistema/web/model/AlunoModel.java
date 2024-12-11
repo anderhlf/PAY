@@ -20,6 +20,9 @@ public class AlunoModel {
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
+    @Column(nullable = false, length = 100)
+    private String cpf;
+
     @ManyToMany
     @JoinTable(
             name="Alunos_na_Disciplina",
@@ -27,4 +30,5 @@ public class AlunoModel {
             inverseJoinColumns = @JoinColumn(name="disciplina_id")
     )
     private Set<DisciplinaModel> disciplinas;
+
 }

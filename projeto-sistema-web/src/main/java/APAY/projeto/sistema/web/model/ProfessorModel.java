@@ -20,6 +20,9 @@ public class ProfessorModel {
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
+    @Column(nullable = false, length = 100)
+    private String salario;
+
     @OneToMany(mappedBy = "professor")
     private Set<DisciplinaModel> disciplinas;
 }
