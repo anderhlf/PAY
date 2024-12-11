@@ -21,6 +21,9 @@ public class DisciplinaModel {
     @JoinColumn(name="professor_id")
     private ProfessorModel professor;
 
+    @Column(nullable = false, length = 100)
+    public String cargo_horaria;
+
     @ManyToMany(mappedBy = "disciplinas")
     private Set<AlunoModel> alunos;
 
