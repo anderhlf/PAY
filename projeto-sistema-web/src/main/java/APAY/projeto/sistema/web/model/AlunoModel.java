@@ -31,4 +31,43 @@ public class AlunoModel {
     )
     private Set<DisciplinaModel> disciplinas;
 
+    public Long getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(Long matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Set<DisciplinaModel> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(Set<DisciplinaModel> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
 }
