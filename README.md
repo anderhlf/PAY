@@ -55,9 +55,13 @@ lombok - Geração automática de código (como getters, setters e construtores)
 ### Realizar o Build do Projeto \ Executar o Projeto Localmente
 ```bash
 mvn clean install
-mvn spring-boot:run
-
 ```
+
+```bash
+mvn spring-boot:run
+```
+
+---
 
 ## Classe Model 
 - Se trata de uma Classe Modelo que será usada para representar a tabela do banco de dados na API, de modo que os atributos correspondam as colunas da tabela, e é responsável pelas regras de negócio e pela interação com o banco de dados.
@@ -144,10 +148,26 @@ Ao criar um Dockerfile, a imagem resultante pode ser executada em qualquer ambie
   
 
 ## Rodando o Projeto
-- Clone a branch main do projeto utilizando o link "LINK DA BRANCH MAIN"
-- Na sua IDE de escolha, execute o comando de compilação maven, ou utilize no terminal "mvn clean package"
-- Acesse a pasta target criada através de um terminal e digite "java -jar NOME-DO-JAR.jar
-- Certifique-se de possuir um banco de dados Postgres na versão indicada com uma database de nome "NOME DA DATABASE DO PROJETO" criada
+- Clone a branch main do projeto utilizando o
+  
+
+```bash
+cd link https://github.com/anderhlf/PAY.git
+```
+
+- Na sua IDE de escolha, execute o comando de compilação maven, ou utilize no terminal
+
+ ```bash
+./mvn clean package -DskipeTest
+ ```
+
+- Acesse a pasta target criada através de um terminal e digite
+  
+  ```bash
+  cd projeto-sistema-web/target
+  ```
+
+- Certifique-se de possuir um banco de dados Postgres na versão indicada com uma database de nome "sistemaweb" criada
 - Altere as variáveis de usuário e senha no application.properties de acordo 
 
 
