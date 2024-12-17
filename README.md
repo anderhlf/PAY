@@ -60,15 +60,15 @@ mvn spring-boot:run
 ```
 
 ## Classe Model 
-- Se trata de uma Classe Modelo que sera usada para representar a tabela do banco de dados na API, de modo que os atributos correspondam as colunas da tabela, e é responsável pelas regras de negócio e pela interação com o banco de dados.
+- Se trata de uma Classe Modelo que será usada para representar a tabela do banco de dados na API, de modo que os atributos correspondam as colunas da tabela, e é responsável pelas regras de negócio e pela interação com o banco de dados.
 
-No caso foram feitas tres 3 Classes ModeL:
+No caso foram feitas três Classes ModeL:
 
 **AlunoModel**
 - Atributos: Nome, Email e CPF.
 - Chave Primaria: Matricula.
 - Relacionamento: ManyToMany(AlunoModel\DisciplinaModel).
-- Metodo: Set e Get.
+- Métodos: Set e Get.
   
 **DisciplinaModel**
 - Atributos: Nome e Carga-Horaria.
@@ -85,9 +85,9 @@ No caso foram feitas tres 3 Classes ModeL:
 ---
 
 ## Repository
-- Trata-se de um padrão de projeto focado na persistemcia de dados, que faz parte da camada de negocios e fornrce objetos para outras camadas, como controle, sem depender da infraestrutura do banco de dados ou da tecnologia de conexão usada.
+- Trata-se de um padrão de projeto focado na persistêmcia de dados, que faz parte da camada de negócios e fornece objetos para outras camadas, como controle, sem depender da infraestrutura do banco de dados ou da tecnologia de conexão usada.
   
-O codigo possui 3 Repositoty:
+O código possui três Repositoty:
 
 **AlunoRepository** **DisciplinaRepository**
 **ProfessorRepository**
@@ -96,7 +96,7 @@ O codigo possui 3 Repositoty:
 ---
 
 ## Service
-- É a parte que gerencia a lógica de negócio nas aplicações Java, especialmente em Spring, ele define as regras que controlam o comportamento da aplicação e gerencia as operações de persistencia de dados, interagindo com os repositorios para garantir o correto processamento das informações.
+- É a parte que gerencia a lógica de negócio nas aplicações Java, especialmente em Spring, ele define as regras que controlam o comportamento da aplicação e gerencia as operações de persistencia de dados, interagindo com os repositórios para garantir o correto processamento das informações.
 
 O codigo possui 3 Setvices:
 
@@ -143,9 +143,11 @@ Ao criar um Dockerfile, a imagem resultante pode ser executada em qualquer ambie
 - Ports: Mapeia as portas do contêiner para a máquina host.
   
 
-## Acesse aplicação 
-Após a instalação dos pré-requisitos e iniciar a aplicação do projeto, clique no link:
-- [http://localhost:8080](http://localhost:8080)
-
+## Rodando o Projeto
+- Clone a branch main do projeto utilizando o link "LINK DA BRANCH MAIN"
+- Na sua IDE de escolha, execute o comando de compilação maven, ou utilize no terminal "mvn clean package"
+- Acesse a pasta target criada através de um terminal e digite "java -jar NOME-DO-JAR.jar
+- Certifique-se de possuir um banco de dados Postgres na versão indicada com uma database de nome "NOME DA DATABASE DO PROJETO" criada
+- Altere as variáveis de usuário e senha no application.properties de acordo 
 
 
