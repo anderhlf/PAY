@@ -31,9 +31,9 @@ public class AlunoService {
         return alunoRepository.save(aluno);
     }
 
-    public AlunoModel update(AlunoModel aluno, Long id) {
-        AlunoModel alunoExistente = alunoRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Aluno: " + id + " não encontrada"));
+    public AlunoModel update(Long alunoId, AlunoModel aluno) {
+        AlunoModel alunoExistente = alunoRepository.findById(alunoId)
+                .orElseThrow(() -> new IllegalArgumentException("Aluno: não encontrada"));
 
         alunoExistente.setDisciplinas(aluno.getDisciplinas());
         alunoExistente.setNome(aluno.getNome());
@@ -42,7 +42,7 @@ public class AlunoService {
         return alunoRepository.save(alunoExistente);
     }
 
-    public void deletar(Long id) {
+    public void deleteById(Long id) {
         alunoRepository.deleteById(id);
     }
 }
