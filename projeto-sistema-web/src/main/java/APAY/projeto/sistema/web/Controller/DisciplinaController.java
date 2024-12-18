@@ -35,12 +35,14 @@ public class DisciplinaController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity<DisciplinaModel> update(@PathVariable Long id, @RequestBody DisciplinaModel disciplina) {
-        return ResponseEntity.ok(disciplinaService.update(disciplina, id));
+        return ResponseEntity.ok(disciplinaService.update(id, disciplina));
     }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
-        disciplinaService.deletar(id);
-        return ResponseEntity.noContent().build();
+        @DeleteMapping("/delete/{id}")
+        public ResponseEntity<Void> delete (@PathVariable Long id){
+            disciplinaService.deleteById(id);
+            return ResponseEntity.noContent().build();
+
+
+        }
     }
-}
