@@ -25,4 +25,5 @@ public class ProfessorModel {
 
     @OneToMany(mappedBy = "professor")
     private Set<DisciplinaModel> disciplinas;
-}
+
+    }
