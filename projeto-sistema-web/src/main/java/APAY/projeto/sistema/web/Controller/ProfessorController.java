@@ -1,7 +1,7 @@
 package APAY.projeto.sistema.web.Controller;
 
-import APAY.projeto.sistema.web.Service.ProfessorService;
 import APAY.projeto.sistema.web.model.ProfessorModel;
+import APAY.projeto.sistema.web.Service.ProfessorService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,12 +35,12 @@ public class ProfessorController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity<ProfessorModel> update(@PathVariable Long id, @RequestBody ProfessorModel professor) {
-        return ResponseEntity.ok(professorService.update(professor,id));
+        return ResponseEntity.ok(professorService.atualizar(id, professor));
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        professorService.deletar(id);
+        professorService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }
