@@ -35,12 +35,12 @@ public class AlunoController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity<AlunoModel> update(@PathVariable Long id, @RequestBody AlunoModel aluno) {
-        return ResponseEntity.ok(alunoService.update(aluno, id));
+        return ResponseEntity.ok(alunoService.update(id, aluno));
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        alunoService.deletar(id);
+        alunoService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }

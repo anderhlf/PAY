@@ -29,9 +29,9 @@ public class DisciplinaService {
         return disciplinaRepository.save(disciplina);
     }
 
-    public DisciplinaModel update(DisciplinaModel disciplina, Long id) {
-        DisciplinaModel discipliExistente = disciplinaRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Disciplina: " + id + " não encontrada"));
+    public DisciplinaModel update(Long disciplinaId, DisciplinaModel disciplina) {
+        DisciplinaModel discipliExistente = disciplinaRepository.findById(disciplinaId)
+                .orElseThrow(() -> new RuntimeException("Disciplina: não encontrada"));
 
         discipliExistente.setAlunos(disciplina.getAlunos());
         discipliExistente.setNome(disciplina.getNome());
@@ -40,7 +40,6 @@ public class DisciplinaService {
         return disciplinaRepository.save(discipliExistente);
     }
 
-    public void deletar(Long id) {
-        disciplinaRepository.deleteById(id);
+    public void deleteById(Long id) {disciplinaRepository.deleteById(id);
     }
 }
